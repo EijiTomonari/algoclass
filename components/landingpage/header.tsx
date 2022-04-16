@@ -8,6 +8,7 @@ const LandingPageHeader = () => {
       px={"13%"}
       py={"1%"}
       justifyContent="space-between"
+      align={"center"}
     >
       <Link href="/">
         <Image src="logo.svg" w={"10em"}></Image>

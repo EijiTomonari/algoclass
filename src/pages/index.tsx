@@ -1,4 +1,12 @@
-import { Button, Flex, Heading, Text, Image, Icon } from "@chakra-ui/react";
+import {
+  Button,
+  Flex,
+  Heading,
+  Text,
+  Image,
+  Icon,
+  Link,
+} from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import LandingPageHeader from "../../components/landingpage/header";
@@ -6,6 +14,7 @@ import style from "../../styles/LandingPage.module.css";
 import { HiOutlinePuzzle } from "react-icons/hi";
 import { AiOutlineBuild } from "react-icons/ai";
 import { FaLaptopCode } from "react-icons/fa";
+import FeatureWithIcon from "../../components/landingpage/featureWithIcon";
 
 const Home: NextPage = () => {
   return (
@@ -20,6 +29,7 @@ const Home: NextPage = () => {
       </Head>
       <LandingPageHeader></LandingPageHeader>
 
+      {/* First section */}
       <Flex align={"center"} mt={"10em"} flexDir={"column"} textAlign="center">
         <Heading>
           Aprenda a programar{" "}
@@ -35,69 +45,87 @@ const Home: NextPage = () => {
         <Image mt={"10"} src="rocket.png"></Image>
       </Flex>
 
+      {/* Second section */}
       <Flex
-        flexDir={"row"}
-        px={"15em"}
+        flexDir={["column", "column", "row"]}
         mt={"5em"}
         align="center"
         justifyContent={"space-evenly"}
       >
-        <Flex flexDir="row" align={"center"} px={"2em"}>
-          <Icon
-            as={HiOutlinePuzzle}
-            color="greenyellow"
-            w={"3em"}
-            h={"3em"}
-            mr={"1em"}
-          ></Icon>
-          <Flex flexDir={"column"}>
-            <Heading color="greenyellow" size={"md"}>
-              Aprenda de forma interativa
-            </Heading>
-            <Text>
-              Resolva desafios no editor de código online e receba feedbacks
-              instantaneamente
-            </Text>
-          </Flex>
-        </Flex>
+        <FeatureWithIcon
+          icon={HiOutlinePuzzle}
+          heading={"Aprenda de forma interativa"}
+          body={
+            "Resolva desafios no editor de código online e receba feedbacks instantaneamente"
+          }
+        ></FeatureWithIcon>
 
-        <Flex flexDir="row" align={"center"} px={"2em"}>
-          <Icon
-            as={AiOutlineBuild}
-            color="greenyellow"
-            w={"3em"}
-            h={"3em"}
-            mr={"1em"}
-          ></Icon>
-          <Flex flexDir={"column"}>
-            <Heading color="greenyellow" size={"md"}>
-              Domine os fundamentos
-            </Heading>
-            <Text>
-              Aprenda conceitos de Algoritmos e Estruturas de Dados, a base da
-              programação
-            </Text>
-          </Flex>
-        </Flex>
+        <FeatureWithIcon
+          icon={AiOutlineBuild}
+          heading={"Domine os fundamentos"}
+          body={
+            "Aprenda conceitos de Algoritmos e Estruturas de Dados, a base da programação"
+          }
+        ></FeatureWithIcon>
 
-        <Flex flexDir="row" align={"center"} px={"2em"}>
-          <Icon
-            as={FaLaptopCode}
-            color="greenyellow"
-            w={"3em"}
-            h={"3em"}
-            mr={"1em"}
-          ></Icon>
-          <Flex flexDir={"column"}>
-            <Heading color="greenyellow" size={"md"}>
-              Exercícios selecionados
-            </Heading>
-            <Text>
-              Problemas que realmente exploram o que é cobrado em entrevistas de
-              código
-            </Text>
+        <FeatureWithIcon
+          icon={FaLaptopCode}
+          heading={"Exercícios selecionados"}
+          body={
+            "Problemas que realmente exploram o que é cobrado em entrevistas de código"
+          }
+        ></FeatureWithIcon>
+      </Flex>
+
+      {/* Third section */}
+      <Flex
+        textAlign={"center"}
+        align="center"
+        alignContent={"center"}
+        flexDir="column"
+        mt={"3em"}
+      >
+        <Flex
+          flexDir={"column"}
+          background="linear-gradient(49deg, rgba(40,40,40,1) 0%, rgba(24,24,24,1) 100%)"
+          borderRadius={"10px"}
+          py={"2em"}
+        >
+          <Heading>A plataforma em números</Heading>
+          <Flex flexDir={"row"} justifyContent="space-evenly" my={"3em"}>
+            <Flex flexDir={"column"}>
+              <Heading size={"lg"}>0</Heading>
+              <Text>Exercícios disponíveis</Text>
+            </Flex>
+            <Flex flexDir={"column"}>
+              <Heading size={"lg"}>0</Heading>
+              <Text>Pessoas cadastradas</Text>
+            </Flex>
+            <Flex flexDir={"column"}>
+              <Heading size={"lg"}>0</Heading>
+              <Text>Exercícios resolvidos</Text>
+            </Flex>
           </Flex>
         </Flex>
+      </Flex>
+
+      {/* Footer */}
+      <Flex
+        flexDir={"row"}
+        align="center"
+        justifyContent={"space-evenly"}
+        py={"2em"}
+      >
+        <Text>
+          Feito com ❤️&nbsp;&nbsp;e ☕ &nbsp;por
+          <Link
+            href="https://github.com/GabrielTomonariDev"
+            isExternal
+            ml={"5px"}
+          >
+            @eiji.tomonari
+          </Link>
+        </Text>
       </Flex>
     </Flex>
   );
