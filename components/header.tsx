@@ -15,7 +15,7 @@ const LandingPageHeader = () => {
     <Flex
       flexDir={"row"}
       w={"100%"}
-      px={"13%"}
+      px={"5%"}
       py={"1%"}
       justifyContent="space-between"
       align={"center"}
