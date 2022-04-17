@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import LandingPageHeader from "../../components/landingpage/header";
+import LandingPageHeader from "../../components/header";
 import style from "../../styles/LandingPage.module.css";
 import { HiOutlinePuzzle } from "react-icons/hi";
 import { AiOutlineBuild } from "react-icons/ai";

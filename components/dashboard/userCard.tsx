@@ -12,7 +12,7 @@ const UserCard = () => {
       p={"1em"}
       w={"75%"}
     >
-      <Flex flexDir={"row"} align="center">
+      <Flex flexDir={["column", "row"]} align="center">
         <Flex flexDir={"column"}>
           <Avatar
             name="Eiji Tomonari"

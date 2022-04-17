@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import UserCard from "../../components/dashboard/userCard";
 import UserCourses from "../../components/dashboard/userCourses";
-import Header from "../../components/landingpage/header";
+import Header from "../../components/header";
 
 const Dashboard: NextPage = () => {
   return (

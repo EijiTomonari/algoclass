@@ -6,6 +6,7 @@ import {
   Image,
   Flex,
   Link,
+  Tag,
 } from "@chakra-ui/react";
 
 const UserCourseCard = () => {
@@ -13,7 +14,7 @@ const UserCourseCard = () => {
     <Link isExternal href="https://www.google.com">
       <GridItem
         w={"15em"}
-        h={"15em"}
+        minH={"15em"}
         background="#333333"
         borderRadius={"10px"}
       >
@@ -28,6 +29,9 @@ const UserCourseCard = () => {
           }
         ></Image>
         <Flex flexDir="column" p={"1em"}>
+          <Tag size={"sm"} colorScheme={"red"} mb={"1em"}>
+            Exercícios novos toda semana
+          </Tag>
           <Heading size="sm" fontWeight={"bold"} alignSelf="start">
             Lógica de Programação
           </Heading>
