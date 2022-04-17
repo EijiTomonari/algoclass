@@ -6,7 +6,12 @@ const FeatureWithIcon = (props: {
   body: string;
 }) => {
   return (
-    <Flex flexDir="row" align={"center"}>
+    <Flex
+      flexDir="row"
+      align={"center"}
+      px={["3em", null, "1em", "4em"]}
+      py={["1em", null, "0"]}
+    >
       <Icon
         as={props.icon}
         color="greenyellow"

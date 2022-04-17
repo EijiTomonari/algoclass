@@ -15,6 +15,7 @@ import { HiOutlinePuzzle } from "react-icons/hi";
 import { AiOutlineBuild } from "react-icons/ai";
 import { FaLaptopCode } from "react-icons/fa";
 import FeatureWithIcon from "../../components/landingpage/featureWithIcon";
+import PlatformStatistics from "../../components/landingpage/platformStatistics";
 
 const Home: NextPage = () => {
   return (
@@ -85,28 +86,7 @@ const Home: NextPage = () => {
         flexDir="column"
         mt={"3em"}
       >
-        <Flex
-          flexDir={"column"}
-          background="linear-gradient(49deg, rgba(40,40,40,1) 0%, rgba(24,24,24,1) 100%)"
-          borderRadius={"10px"}
-          py={"2em"}
-        >
-          <Heading>A plataforma em números</Heading>
-          <Flex flexDir={"row"} justifyContent="space-evenly" my={"3em"}>
-            <Flex flexDir={"column"}>
-              <Heading size={"lg"}>0</Heading>
-              <Text>Exercícios disponíveis</Text>
-            </Flex>
-            <Flex flexDir={"column"}>
-              <Heading size={"lg"}>0</Heading>
-              <Text>Pessoas cadastradas</Text>
-            </Flex>
-            <Flex flexDir={"column"}>
-              <Heading size={"lg"}>0</Heading>
-              <Text>Exercícios resolvidos</Text>
-            </Flex>
-          </Flex>
-        </Flex>
+        <PlatformStatistics></PlatformStatistics>
       </Flex>
 
       {/* Footer */}
